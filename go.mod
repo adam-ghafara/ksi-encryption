@@ -1,4 +1,4 @@
-module tde_pack
+module github.com/adam-ghafara/ksi-encryption
 
 go 1.21.3
 
