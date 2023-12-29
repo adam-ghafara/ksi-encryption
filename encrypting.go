@@ -59,7 +59,7 @@ func decrypt(data, key []byte) ([]byte, error) {
 
 func encryptProcess() {
 	// Sample data
-	data := []byte("Sample data for encryption and decryption")
+	data := []byte("Sample data for encryption")
 
 	// AES-256 Key
 	key := []byte("0123456789012345678901234567890")
@@ -77,7 +77,7 @@ func encryptProcess() {
 
 func decryptProcess() {
 	// Sample data
-	data := []byte("Sample data for encryption and decryption")
+	data := []byte("Sample data for decryption")
 
 	// AES-256 Key
 	key := []byte("0123456789012345678901234567890")

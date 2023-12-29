@@ -2,6 +2,7 @@ package ksi
 
 import (
 	"database/sql"
+	"encoding/hex"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
@@ -15,6 +16,14 @@ func main() {
 		panic(err)
 	}
 	defer db.Close()
+
+	hexDecodeString := func(s string) ([]byte, error) {
+		b, err := hex.DecodeString(s)
+		if err != nil {
+			return nil, err
+		}
+		return b, nil
+	}
 
 	// key = 32 bytes long
 	key, err = hexDecodeString("000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f")
